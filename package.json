@@ -6,13 +6,25 @@
   "scripts": {
     "start": "electron .",
     "debug:windows": "set DEBUG=true & electron .",
-	"build": "electron-builder build --win --publish never",
-	"deploy": "electron-builder build --win --publish always"
+    "build": "electron-builder build --win --publish never",
+    "deploy": "electron-builder build --win --publish always"
   },
-	"repository": { 
-		"type": "git", 
-		"url": "https://github.com/tejadong/electron-updates.git" 
-	},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tejadong/electron-updates.git"
+  },
+  "build": {
+    "publish": [
+      {
+        "provider": "generic",
+        "url": "http://127.0.0.1:8080/"
+      }
+    ],
+    "appId": "com.github.tejadong.electron-updates",
+    "nsis": {
+      "perMachine": true
+    }
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -22,6 +34,7 @@
   },
   "dependencies": {
     "electron-updater": "^4.3.5",
+    "http-server": "^0.12.3",
     "mime-types": "^2.1.28",
     "simplemde": "^1.11.2"
   }
