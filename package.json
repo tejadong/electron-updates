@@ -1,13 +1,14 @@
 {
   "name": "markdown-editor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "debug:windows": "set DEBUG=true & electron .",
     "build": "electron-builder build --win --publish never",
-    "deploy": "electron-builder build --win --publish always"
+    "deploy": "electron-builder build --win --publish always",
+    "http-server": "node_modules/.bin/http-server wwwroot/ -p 8080"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
       {
         "provider": "generic",
         "url": "http://127.0.0.1:8080/"
+      },
+      {
+        "provider": "github",
+        "owner": "tejadong",
+        "repo": "electron-updates"
       }
     ],
     "appId": "com.github.tejadong.electron-updates",
