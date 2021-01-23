@@ -1,0 +1,60 @@
+productName: ---
+appId: ---
+
+# Windows configuration
+win:
+  icon: "icon.png"
+  target:
+    - "zip"
+    - "nsis"
+
+# Mac OS configuration
+mac:
+  icon: "icon.png"
+
+# Config for OSX dmg
+dmg:
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: "link"
+      path: "/Applications"
+
+# Linux configuration
+linux:
+  category: Development
+  target:
+    - "AppImage"
+    - "deb"
+    - "rpm"
+
+# Config for the windows installer
+nsis:
+  oneClick: true
+  perMachine: true
+
+deb:
+  depends:
+    # --- Default START
+    - gconf2
+    - gconf-service
+    - libnotify4
+    - libappindicator1
+    - libxtst6
+    - libnss3
+    # --- Default END
+    - libsecret-1-0 # This is needed for keytar on linux
+
+directories:
+  buildResources: "dist/resources"
+  output: "dist/release"
+
+publish:
+#  provider: generic
+#  url: "---"
+  provider: github
+  owner: ---
+  repo: ---
+  token: ---
