@@ -1,0 +1,28 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "debug:windows": "set DEBUG=true & electron .",
+	"build": "electron-builder build --mac --win --publish never",
+	"deploy": "electron-builder build --mac --win --publish always"
+  },
+	"repository": { 
+		"type": "git", 
+		"url": "https://github.com/tejadong/electron-updates.git" 
+	},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^11.2.0",
+    "electron-builder": "^22.9.1"
+  },
+  "dependencies": {
+    "electron-updater": "^4.3.5",
+    "mime-types": "^2.1.28",
+    "simplemde": "^1.11.2"
+  }
+}
