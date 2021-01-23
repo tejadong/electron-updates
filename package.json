@@ -1,6 +1,6 @@
 {
   "name": "markdown-editor",
-  "version": "1.0.3",
+  "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,33 +14,16 @@
     "type": "git",
     "url": "https://github.com/tejadong/electron-updates.git"
   },
-  "build": {
-    "publish": [
-      {
-        "provider": "generic",
-        "url": "http://127.0.0.1:8080/"
-      },
-      {
-        "provider": "github",
-        "owner": "tejadong",
-        "repo": "electron-updates"
-      }
-    ],
-    "appId": "com.github.tejadong.electron-updates",
-    "nsis": {
-      "perMachine": true
-    }
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "electron": "^11.2.0",
-    "electron-builder": "^22.9.1"
+    "electron-builder": "^22.9.1",
+    "http-server": "^0.12.3"
   },
   "dependencies": {
     "electron-updater": "^4.3.5",
-    "http-server": "^0.12.3",
     "mime-types": "^2.1.28",
     "simplemde": "^1.11.2"
   }
