@@ -1,13 +1,13 @@
 {
   "name": "markdown-editor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "electron .",
     "debug:windows": "set DEBUG=true & electron .",
-	"build": "electron-builder build --mac --win --publish never",
-	"deploy": "electron-builder build --mac --win --publish always"
+	"build": "electron-builder build --win --publish never",
+	"deploy": "electron-builder build --win --publish always"
   },
 	"repository": { 
 		"type": "git", 
